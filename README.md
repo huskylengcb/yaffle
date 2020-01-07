@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yaffle'
+gem 'yaffle', git: 'git@github.com:huskylengcb/yaffle.git'
 ```
 
 And then execute:
@@ -19,6 +19,22 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install yaffle
+```
+
+## Begin
+
+在modals/application_record.rb中添加
+```
+include Yaffle::ActsAsYaffle
+```
+
+modal 中添加
+```
+acts_as_yaffle yaffle_text_field: :attribute
+```
+执行
+```
+Modal.new.squawk("xxx")
 ```
 
 ## Contributing

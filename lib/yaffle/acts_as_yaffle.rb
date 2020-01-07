@@ -17,7 +17,6 @@ module Yaffle
 
     module LocalInstanceMethods
       def squawk(string)
-      	p self.class.yaffle_text_field
         write_attribute(self.class.yaffle_text_field, string.to_squawk)
       end
     end
